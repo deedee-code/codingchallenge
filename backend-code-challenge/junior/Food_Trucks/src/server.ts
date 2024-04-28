@@ -36,7 +36,7 @@ const swaggerOptions: OAS3Options = {
       description: "SF Food Truck Data",
       url: "https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat",
     },
-    servers: [{ url: "http://localhost:3500/api" }],
+    servers: [{ url: "http://localhost:3000/api" }],
     tags: [
       {
         name: "Food Trucks",
