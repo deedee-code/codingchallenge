@@ -1,7 +1,7 @@
 {
   "name": "food_trucks",
   "version": "1.0.0",
-  "description": "",
+  "description": "A service that tells the user what types of food trucks might be found near a specific location on a map.",
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",

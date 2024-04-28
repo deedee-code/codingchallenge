@@ -3,7 +3,6 @@ import axios from "axios";
 import dotenv from "dotenv";
 dotenv.config();
 
-// Define a route to fetch food trucks near a specific location
 const mapFoodTruck = async (req: Request, res: Response) => {
   try {
     const { latitude, longitude } = req.params;
