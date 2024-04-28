@@ -6,7 +6,6 @@ import helmet from "helmet";
 import foodTruckRoute from "./route/food-truck.route";
 import swaggerJsdoc, { OAS3Options } from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
-import path from "path";
 
 dotenv.config();
 
@@ -15,7 +14,6 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
 app.use(cors());
 app.use(
   helmet({
@@ -38,7 +36,7 @@ const swaggerOptions: OAS3Options = {
       description: "SF Food Truck Data",
       url: "https://data.sfgov.org/Permitting/Mobile-Food-Facility-Permit/rqzj-sfat",
     },
-    servers: [{ url: "http://localhost:3000" }],
+    servers: [{ url: "http://localhost:3500/api" }],
     tags: [
       {
         name: "Food Trucks",
@@ -46,36 +44,7 @@ const swaggerOptions: OAS3Options = {
       },
     ],
   },
-  apis: ["src/src/server.ts"],
-  paths: {
-    "/foodtrucks/{latitude}/{longitude}": {
-      get: {
-        summary: "Get food trucks near a specific location",
-      },
-    },
-  },
-  /**
-   * @swagger
-   * /foodtrucks/{latitude}/{longitude}:
-   *  get:
-   *    summary: Get food trucks near a specific location
-   *    parameters:
-   *      - in: path
-   *        name: latitude
-   *        required: true
-   *        description: Latitude coordinate of the location
-   *        schema:
-   *          type: number
-   *      - in: path
-   *        name: longitude
-   *        required: true
-   *        description: Longitude coordinate of the location
-   *        schema:
-   *          type: number
-   *    responses:
-   *      '200':
-   *        description: A list of food trucks near the specified location
-   */
+  apis: ["src/server.ts"],
 };
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
