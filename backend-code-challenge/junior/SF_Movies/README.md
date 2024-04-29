@@ -29,11 +29,11 @@ A service that shows on a map where movies have been filmed in San Francisco.
 
 ## Constraints:
 
-I ran out of time, I wasn't able to finish within the four hours given. If I'm given more time, I will like to implement the UI/UX for the service.
+I ran out of time, I wasn't able to finish within the four hours given. If I'm given more time, I will like to implement the UI/UX for the service. I had difficulty deploying the two projects and that is because they are both on the same repo. I couldn't deploy the two projects.
 
 ## Swagger API Documentation
 
-`http://localhost:3500/api-docs/`
+`http://localhost:3000/api-docs/`
 
 Request:
-`http://localhost:3500/api/movies`
+`http://localhost:3000/api/movies`

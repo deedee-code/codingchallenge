@@ -34,7 +34,7 @@ const swaggerOptions: OAS3Options = {
       description: "SF Movies Data",
       url: "https://data.sfgov.org/Arts-Culture-and-Recreation-/Film-Locations-in-San-Francisco/yitu-d5am",
     },
-    servers: [{ url: "http://localhost:3500/api" }],
+    servers: [{ url: "http://localhost:3000/api" }],
     tags: [
       {
         name: "Movies",
